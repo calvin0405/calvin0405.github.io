@@ -4,7 +4,7 @@ session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  header("location: welcome.php");
+  header("location: index.php");
   exit;
 }
  
@@ -64,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;                            
                             
                             // Redirect user to welcome page
-                            header("location: welcome.php");
+                            header("location: index.php");
                         } else{
                             // Display an error message if password is not valid
                             $password_err = "The password you entered was not valid.";
@@ -86,6 +86,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
     mysqli_close($link);
 }
+include 'login.html';
 ?>
  
 <!DOCTYPE html>
@@ -119,6 +120,63 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
         </form>
-    </div>    
+    </div>  
+    <footer>
+		<div class="container-xl">
+			<div class="row">
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f1.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk//templates_new/images/f3.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f5fps.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f6.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f7.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f9.gif">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/boot-paypal-logo.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/boot-octopus-logo.gif">
+				</div>
+
+				<div class="col-lg-2"></div>
+				<div class="col-lg-2"></div>
+				<div class="col-lg-2"></div>
+				<div class="col-lg-2"></div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="awardBar">
+						<img class="awardIcon" width=100 src="https://www.openshop.com.hk/templates_new/images/nf.png">
+						<img class="awardIcon" width=100 src="https://www.openshop.com.hk/templates_new/images/localbrandhk.png">
+						<img class="awardIcon" width=100 src="https://www.openshop.com.hk/templates_new/images/smile20192.jpg">
+						<img class="awardIcon" width=70 src="https://www.openshop.com.hk/templates_new/images/pc3pic.png">
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</footer>  
 </body>
 </html>

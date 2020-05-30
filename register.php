@@ -1,7 +1,7 @@
 <?php
 // Include config file
 require_once "config.php";
- 
+include "sign.html";
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
@@ -130,6 +130,63 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <p>Already have an account? <a href="login.php">Login here</a>.</p>
         </form>
-    </div>    
+    </div> 
+    <footer>
+		<div class="container-xl">
+			<div class="row">
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f1.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk//templates_new/images/f3.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f5fps.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f6.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f7.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f9.gif">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/boot-paypal-logo.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/boot-octopus-logo.gif">
+				</div>
+
+				<div class="col-lg-2"></div>
+				<div class="col-lg-2"></div>
+				<div class="col-lg-2"></div>
+				<div class="col-lg-2"></div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="awardBar">
+						<img class="awardIcon" width=100 src="https://www.openshop.com.hk/templates_new/images/nf.png">
+						<img class="awardIcon" width=100 src="https://www.openshop.com.hk/templates_new/images/localbrandhk.png">
+						<img class="awardIcon" width=100 src="https://www.openshop.com.hk/templates_new/images/smile20192.jpg">
+						<img class="awardIcon" width=70 src="https://www.openshop.com.hk/templates_new/images/pc3pic.png">
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</footer>   
 </body>
 </html>

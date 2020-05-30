@@ -66,14 +66,14 @@
 						<a class="nav-link" href="about.php">ABOUT US</a>
 					</li>
 						
-					<li class="nav-item dropdown">
+					<li class="nav-item active now dropdown">
 						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">PRODUCTS</a>
 						<div class="dropdown-menu">
 							<a href="ps4.php" class="dropdown-item">PLAYSTATION 4</a>
 							<div class="dropdown-divider"></div>
 							<a href="xbox.php" class="dropdown-item">XBOX</a>
 							<div class="dropdown-divider"></div>
-							<a href="switch.php" class="dropdown-item">NINTENDO SWITCH</a>
+							<a href="switch.php" class="dropdown-item active">NINTENDO SWITCH</a>
 							<div class="dropdown-divider"></div>
 							<a href="pc.php"class="dropdown-item">PC GAMING</a>
 						</div>
@@ -84,18 +84,42 @@
 				  	</li>
 			 	</ul>
 		  
-		  		<ul class="nav navbar-nav ml-auto">
-					<li class="nav-item active now">
+				 <ul class="nav navbar-nav ml-auto">
+					<?php
+                    if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+                    ?>
+                      <li class="nav-item">
 			  			<a class="nav-link" href="register.php"><span class="fas fa-user"></span> Sign Up</a>
 					</li>
 
 					<li class="nav-item">
 			  			<a class="nav-link" href="login.php"><span class="fas fa-sign-in-alt"></span> Login</a>
 					</li>
+					<?php
+        }
+        else{
+        ?>
+                <li class="nav-item">
+			  			<a class="nav-link" href="reset-password.php"><span class="fas fa-user"></span> Reset PW</a>
+					</li>
+
+					<li class="nav-item">
+			  			<a class="nav-link" href="logout.php"><span class="fas fa-sign-in-alt"></span> Logout</a>
+				<?php
+        }
+                    ?>
 		  		</ul>
 			</div>
 		</div>
 	</nav>
+
+	<div class="row">
+		<div class="container-xl">
+			<div class="banner">
+				<img src="https://imagehost.imageupload.net/2020/05/29/aa8hn-foabv.jpg" width=100%>
+			</div>
+		</div>
+	</div>
 
 	<div class="row">
 		<div class="col-lg-12">
@@ -105,7 +129,63 @@
 		</div>
 	</div>
 
-	
+	<footer>
+		<div class="container-xl">
+			<div class="row">
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f1.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk//templates_new/images/f3.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f5fps.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f6.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f7.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/f9.gif">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/boot-paypal-logo.gif">
+				</div>
+
+				<div class="col-lg-2">
+					<img class="paymentIcon" src="https://www.openshop.com.hk/templates_new/images/boot-octopus-logo.gif">
+				</div>
+
+				<div class="col-lg-2"></div>
+				<div class="col-lg-2"></div>
+				<div class="col-lg-2"></div>
+				<div class="col-lg-2"></div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="awardBar">
+						<img class="awardIcon" width=100 src="https://www.openshop.com.hk/templates_new/images/nf.png">
+						<img class="awardIcon" width=100 src="https://www.openshop.com.hk/templates_new/images/localbrandhk.png">
+						<img class="awardIcon" width=100 src="https://www.openshop.com.hk/templates_new/images/smile20192.jpg">
+						<img class="awardIcon" width=70 src="https://www.openshop.com.hk/templates_new/images/pc3pic.png">
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</footer>
 
 	<script>
 		$('ul.nav li.dropdown').hover(function() {
